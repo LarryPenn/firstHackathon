@@ -11,7 +11,7 @@ public class SendTexts {
     // Find your Account Sid and Token at twilio.com/console
     // DANGER! This is insecure. See http://twil.io/secure
     public static final String ACCOUNT_SID = "ACd2a83fbfbea92c00e25a54b9b8466f7f";
-    public static final String AUTH_TOKEN = "353de2ebdb036ffd25e44621ee9e78df";
+    public static final String AUTH_TOKEN = "Enter auth token";
 
     public static void sendMessage(String phoneNumber, String weatherMessage) {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
