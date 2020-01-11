@@ -1,6 +1,10 @@
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 
+/***
+ * Class is taken as is from twilio.com to send text messages. Simply just redesigned method to take in a phone
+ * number and message when creating a message instance.
+ */
 public class SendTexts {
     // Install the Java helper library from twilio.com/docs/java/install
 
@@ -16,7 +20,7 @@ public class SendTexts {
                 new com.twilio.type.PhoneNumber("+1 201 903 9808"),
                 weatherMessage)
                 .create();
-        System.out.println(message.getSid());
+        System.out.println("Success " + message.getSid());
     }
 
 }
