@@ -1,4 +1,5 @@
 import com.twilio.Twilio;
+import com.twilio.exception.ApiException;
 import com.twilio.rest.api.v2010.account.Message;
 
 /***
@@ -10,17 +11,26 @@ public class SendTexts {
 
     // Find your Account Sid and Token at twilio.com/console
     // DANGER! This is insecure. See http://twil.io/secure
-    public static final String ACCOUNT_SID = "ACd2a83fbfbea92c00e25a54b9b8466f7f";
+    public static final String ACCOUNT_SID = "AC45fb1f4efeee096c7ec211bdc4fba70c";
 //    public static final String AUTH_TOKEN = "Enter auth token";
 
     public static void sendMessage(String phoneNumber, String weatherMessage, String AUTH_TOKEN) {
-        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+        try{
+        	Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+        
         Message message = Message.creator(
                 new com.twilio.type.PhoneNumber("+1" + phoneNumber),
-                new com.twilio.type.PhoneNumber("+1 201 903 9808"),
+                new com.twilio.type.PhoneNumber("+1 901 209 5374"),
                 weatherMessage)
                 .create();
         System.out.println("Success " + message.getSid());
+        }
+        catch(ApiException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+        	System.out.println("Test failed: please check if your inputs are correct");
+        }
+        
     }
 
     public static void main(String[] args) {
