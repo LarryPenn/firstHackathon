@@ -15,7 +15,7 @@ The Runner.java class is only file that needs to be run in order for the project
   number and authentication token. 
     - For the purposes of the Hackathon, (we can supply both the openweathermap.org API key and Twilio authentication token so the program can be run properly). At the moment,
     the program requests an API key and Authentication Token via console input from the Runner.java file.  
-    - Open the Runner.java file, and compile it. It will prompt you for your phone number, zipcode, openweathermap.org API key, and a Twilio Authentication Token. Once these are provided, the program will retrieve the weather data for your zipcode, and send a text message to the phone number provided.  
+- Open the Runner.java file, and compile it. It will prompt you for your phone number, zipcode, openweathermap.org API key, and a Twilio Authentication Token. Once these are provided, the program will retrieve the weather data for your zipcode, and send a text message to the phone number provided.  
   
   
 ## Final Notes
