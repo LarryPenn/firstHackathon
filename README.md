@@ -20,7 +20,7 @@ Hi! Welcome to our project for the MOSA Hackathon.
   used. So, if you would like to receive a text message to your phone, you will have to give us your phone number, and we will
   add it to the list of verified numbers (this involves receiving a text from Twilio, and you will have to give us the 5 digit code).
   
-  - The main cause for errors would be: 
+  - The main cause(s) for errors would be: 
     1. Inputting a phone number that has not been verified when compiling Runner.Java
     2. Incorrect API key for openweathermap.org, or failure to supply an API key
     3. Incorrect Authentication Token for Twilio, or failure to supply the token. 
