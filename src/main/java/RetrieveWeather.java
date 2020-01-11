@@ -20,7 +20,7 @@ import java.util.Map;
 public class RetrieveWeather {
 
     // This is set to an API key from the Runner class based on user input to console.
-    private String apiKey ;
+    private String apiKey;
     private static final String weatherAPIURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
 
     /***

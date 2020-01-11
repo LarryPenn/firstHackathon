@@ -10,15 +10,16 @@ public class Runner {
         Scanner sc = new Scanner(System.in);
         String phoneNumber = null;
         do {
-        System.out.println("Please type in your phone number");
-        phoneNumber = sc.next();
+            System.out.println("Please type in your phone number");
+            phoneNumber = sc.next();
         }
         while (phoneNumber.length() != 10);
-        String zipCode=null;
-		do {
-        		System.out.println("Thank you! Now, please type in your zipcode.");
-        		zipCode = sc.next();}
-        while (Integer.parseInt(zipCode)<=0 || Integer.parseInt(zipCode)>99999 || zipCode.length()!=5);
+        String zipCode = null;
+        do {
+            System.out.println("Thank you! Now, please type in your zipcode.");
+            zipCode = sc.next();
+        }
+        while (Integer.parseInt(zipCode) <= 0 || Integer.parseInt(zipCode) > 99999 || zipCode.length() != 5);
         System.out.println("Please enter twilio authentication token");
         String AUTH_TOKEN = sc.next();
         System.out.println("Please enter openweather.org API Key");
@@ -27,8 +28,7 @@ public class Runner {
         rw.setApiKey(weatherAPIKey);
         try {
             SendTexts.sendMessage(phoneNumber, rw.formatWeatherDetails(rw.getWeatherAttributes(zipCode)), AUTH_TOKEN);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
