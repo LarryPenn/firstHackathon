@@ -7,12 +7,15 @@ public class weather {
 	
 	
 	public String getMain() {
+
 		return main;
 	}
 	public void setMain(String main) {
+
 		this.main = main;
 	}
 	public double getTemp() {
+
 		return temp;
 	}
 	public void setTemp(double temp) {
