@@ -19,7 +19,8 @@ import java.util.Map;
  */
 public class RetrieveWeather {
 
-    private String apiKey = "Enter API key for website."; // TODO change this to weatherText.user input from console
+    // This is set to an API key from the Runner class based on user input to console.
+    private String apiKey ;
     private static final String weatherAPIURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
 
     /***
@@ -55,7 +56,7 @@ public class RetrieveWeather {
     /***
      * This method takes in the apiKey to be used as well as the weatherText.user's zipcode and queries the
      * openweather.org website for weatherText.weather data for that weatherText.user's zipcode, using the apikey.
-     //     * @param apiKey TODO make it so user has to input API KEY!!!!
+     //     * @param apiKey
      * @param zipCode
      * @return Hashmap with all relevant weatherText.weather data for a weatherText.user's zipcode.
      * @throws IOException
@@ -87,7 +88,6 @@ public class RetrieveWeather {
             weatherInfo.put("The low temperature of the day is:", minTemp);
             weatherInfo.put("The high temperature is:", maxTemp);
             weatherInfo.put("The temperature currently feels like:", tempFeelsLike);
-
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
@@ -100,13 +100,18 @@ public class RetrieveWeather {
      * @return String that is nicely formatted
      */
     public String formatWeatherDetails(HashMap<String, String> weatherInfo) {
-        StringBuilder messageToUser = new StringBuilder("Here are the details about weather at your location:" + '\n');
+        StringBuilder messageToUser = new StringBuilder('\n' + "Here are the details about weather at your location:" +
+                '\n' + '\n');
         for (String weatherAttribute : weatherInfo.keySet()) {
-            messageToUser.append(weatherAttribute + " " + weatherInfo.get(weatherAttribute) + '\n');
+            messageToUser.append(weatherAttribute + " " + weatherInfo.get(weatherAttribute) + '\n' + '\n');
         }
         return messageToUser.toString();
     }
 
+    /***
+     * Sets apikey to put into URL when querying openweathermap.org.
+     * @param apiKey
+     */
     public void setApiKey(String apiKey) {
         this.apiKey = apiKey;
     }
