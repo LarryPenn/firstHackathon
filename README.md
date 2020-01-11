@@ -1,5 +1,7 @@
 # MOSA Hackathon Project
-Hi! Welcome to our project for the MOSA Hackathon. 
+Hi! Welcome to our project for the MOSA Hackathon. The program we've created does a couple key things. It takes input in from a user for their phone number and zipcode, in order to send them a text message with details about the current weather conditions at their location. 
+
+The Runner.java class is only file that needs to be run in order for the project to work. We query openweathermap.org for the weather data for the zip code supplied by a user, and then we send a text message with all of the weather details to the phone number provided. The project makes use of querying an API, retrieving the data in JSON format, parsing it, and extracting the necessary attributes from the data to provide to the user.    
 
 ## Important items to note: 
   - The source code is written in Java, using SDK 1.8 and Java SE 8
@@ -13,6 +15,7 @@ Hi! Welcome to our project for the MOSA Hackathon.
   number and authentication token. 
     - For the purposes of the Hackathon, (we can supply both the openweathermap.org API key and Twilio authentication token so the program can be run properly). At the moment,
     the program requests an API key and Authentication Token via console input from the Runner.java file.  
+    - Open the Runner.java file, and compile it. It will prompt you for your phone number, zipcode, openweathermap.org API key, and a Twilio Authentication Token. Once these are provided, the program will retrieve the weather data for your zipcode, and send a text message to the phone number provided.  
   
   
 ## Final Notes
