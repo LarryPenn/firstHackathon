@@ -19,8 +19,7 @@ import java.util.Map;
  */
 public class RetrieveWeather {
 
-    //    my key 8365433bc5b8ac876c7f82b0af27a5e5
-    private String apiKey = "49b96c058384bf0defca868c4cfc1932"; // TODO change this to weatherText.user input from console
+    private String apiKey = "Enter API key for website."; // TODO change this to weatherText.user input from console
     private static final String weatherAPIURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
 
     /***
