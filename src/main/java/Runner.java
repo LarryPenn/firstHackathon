@@ -22,10 +22,8 @@ public class Runner {
         while (Integer.parseInt(zipCode) <= 0 || Integer.parseInt(zipCode) > 99999 || zipCode.length() != 5);
         System.out.println("Please enter twilio authentication token");
         String AUTH_TOKEN = sc.next();
-        System.out.println("Please enter openweather.org API Key");
-        String weatherAPIKey = sc.next();
         RetrieveWeather rw = new RetrieveWeather();
-        rw.setApiKey(weatherAPIKey);
+        sc.close();
         try {
             SendTexts.sendMessage(phoneNumber, rw.formatWeatherDetails(rw.getWeatherAttributes(zipCode)), AUTH_TOKEN);
         } catch (IOException e) {

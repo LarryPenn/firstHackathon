@@ -20,16 +20,15 @@ import java.util.Map;
 public class RetrieveWeather {
 
     // This is set to an API key from the Runner class based on user input to console.
-    private String apiKey;
+    private static final String apiKey = "8365433bc5b8ac876c7f82b0af27a5e5";
     private static final String weatherAPIURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
 
     /***
      * Helper method used to create URL to pass to API with given API key, and zipcode.
-     * @param apiKey - users API key
      * @param zipCode - users zip code
      * @return - URL in properly encoded format to query API.
      */
-    private static URL createURL(String apiKey, String zipCode) {
+    private static URL createURL(String zipCode) {
         URL url = null;
         try {
             url = new URL(weatherAPIURL + zipCode + ",us" + "&appid=" + apiKey + "&units=imperial");
@@ -62,7 +61,7 @@ public class RetrieveWeather {
      * @throws IOException
      */
     public HashMap<String, String> getWeatherAttributes(String zipCode) throws IOException {
-        URLConnection conn = createURL(apiKey, zipCode).openConnection();
+        URLConnection conn = createURL(zipCode).openConnection();
         StringBuilder jsonData = new StringBuilder();
         HashMap<String, String> weatherInfo = new HashMap<String, String>();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
@@ -108,12 +107,5 @@ public class RetrieveWeather {
         return messageToUser.toString();
     }
 
-    /***
-     * Sets apikey to put into URL when querying openweathermap.org.
-     * @param apiKey
-     */
-    public void setApiKey(String apiKey) {
-        this.apiKey = apiKey;
-    }
 
 }

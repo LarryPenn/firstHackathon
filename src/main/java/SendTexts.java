@@ -16,7 +16,6 @@ public class SendTexts {
     public static void sendMessage(String phoneNumber, String weatherMessage, String AUTH_TOKEN) {
         try {
             Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-
             Message message = Message.creator(
                     new com.twilio.type.PhoneNumber("+1" + phoneNumber),
                     new com.twilio.type.PhoneNumber("+1 513 283 0037"),
