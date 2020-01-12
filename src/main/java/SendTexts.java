@@ -11,7 +11,7 @@ public class SendTexts {
 
     // Find your Account Sid and Token at twilio.com/console
     // DANGER! This is insecure. See http://twil.io/secure
-    public static final String ACCOUNT_SID = "AC45fb1f4efeee096c7ec211bdc4fba70c";
+    public static final String ACCOUNT_SID = "ACd2a83fbfbea92c00e25a54b9b8466f7f";
 
     public static void sendMessage(String phoneNumber, String weatherMessage, String AUTH_TOKEN) {
         try {
@@ -19,7 +19,7 @@ public class SendTexts {
 
             Message message = Message.creator(
                     new com.twilio.type.PhoneNumber("+1" + phoneNumber),
-                    new com.twilio.type.PhoneNumber("+1 901 209 5374"),
+                    new com.twilio.type.PhoneNumber("+1 513 283 0037"),
                     weatherMessage)
                     .create();
             System.out.println("Success");
@@ -27,7 +27,6 @@ public class SendTexts {
             System.out.println(e.getMessage() + '\n');
             System.out.println("Test failed: please check if your inputs are correct");
         }
-
     }
 
 }
