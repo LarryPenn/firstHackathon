@@ -10,9 +10,9 @@ The Runner.java class is only file that needs to be run in order for the project
   - You will need all of the external libraries to properly run the project. 
   
 ## How to run the project 
-  - Clone the repository, and ensure that you have registered on https://openweathermap.org/ to get your API key, which is used in the RetrieveWeather.java file.
+  - Clone the repository, and ensure that you have registered on https://openweathermap.org/ to get your API key, which is used in the RetrieveWeather.java file. <b> For judging purposes, we will supply the openweathermap API key. </b>
   - If you do not have a Twilio account or openweathermap.org account, you will need to create one in order to get an API key for openweathermap.org as well as a Twilio phone
-  number and authentication token. <b> For judging purposes, we will supply the Twilio Authentication Token </b>.
+  number and authentication token. <b> For judging purposes, we will supply the Twilio Authentication Token. </b>
     - For the purposes of the Hackathon, (we can supply both the openweathermap.org API key and Twilio authentication token so the program can be run properly). At the moment,
     the program requests an API key and Authentication Token via console input from the Runner.java file.  
 - Open the Runner.java file, and compile it. It will prompt you for your phone number, zipcode, openweathermap.org API key, and a Twilio Authentication Token. Once these are provided, the program will retrieve the weather data for your zipcode, and send a text message to the phone number provided.  
